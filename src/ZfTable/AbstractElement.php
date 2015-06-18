@@ -111,7 +111,7 @@ abstract class AbstractElement extends AbstractCommon
      */
     public function addAttr($name, $value)
     {
-        if (!in_array($name, $this->attributes)) {
+        if (!array_key_exists($name, $this->attributes)) {
             $this->attributes[$name] = $value;
         }
         return $this;
